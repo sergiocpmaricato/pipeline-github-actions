@@ -11,6 +11,7 @@ terraform {
     storage_account_name = "remotestatecabral"
     container_name       = "remote-state"
     key                  = "azure-vm/terraform.tfstate"
+    use_microsoft_graph = true
   }
 }
 
