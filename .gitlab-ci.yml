@@ -9,8 +9,8 @@ stages:
   image:
     name: hashicorp/terraform
     entrypoint: [""]
-    before_script:
-      - terraform init
+  before_script:
+    - terraform init
 
 validate:
   extends: .base
