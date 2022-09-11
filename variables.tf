@@ -4,3 +4,13 @@ variable "location" {
   default     = "Brazil South"
 
 }
+
+variable "vm_pub_key"{
+  description = "Chave publica SSH"
+  type = string
+}
+
+variable "vm_private_key"{
+  description = "Chave privada SSH"
+  type = string
+}
