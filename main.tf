@@ -26,7 +26,7 @@ data "terraform_remote_state" "vnet" {
     resource_group_name  = "remote-state"
     storage_account_name = "remotestatecabral"
     container_name       = "remote-state"
-    key                  = "pipeline-gitlab-ci/terraform.tfstate"
+    key                  = "azure-vnet/terraform.tfstate"
   }
 }
 
