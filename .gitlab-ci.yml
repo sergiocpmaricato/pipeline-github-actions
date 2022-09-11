@@ -12,13 +12,13 @@ stages:
   before_script:
     - terraform init
 
-validate:
+terraformValidate:
   extends: .base
   stage: validate
   script:
     - terraform validate
 
-plan:
+terraformPlan:
   extends: .base
   stage: plan
   script:
@@ -29,7 +29,7 @@ plan:
     paths:
       - plan.out
 
-apply:
+terraformApply:
   extends: .base
   stage: apply
   script:
@@ -40,10 +40,17 @@ apply:
     paths:
       - plan.out
   when: manual
+  environment:
+    name: apply_ci
+    on_stop: terraformDestroy
+    auto_stop_in: 5 min
 
-destroy:
+terraformDestroy:
   extends: .base
   stage: destroy
   script:
     - terraform destroy -auto-approve
   when: manual
+  environment:
+    name: apply_ci
+    action: stop
