@@ -1,8 +1,8 @@
 stages:
-    - validate
-    - plan
-    - apply
-    - destroy
+  - validate
+  - plan
+  - apply
+  - destroy
 
 
 .base:
