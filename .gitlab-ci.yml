@@ -10,7 +10,7 @@ stages:
     name: hashicorp/terraform
     entrypoint: [""]
   before_script:
-    - terraform init
+    - terraform init -upgrade
 
 terraformValidate:
   extends: .base
