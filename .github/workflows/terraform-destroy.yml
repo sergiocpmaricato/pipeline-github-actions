@@ -12,7 +12,7 @@ env:
 
 jobs:
   terraform:
-    name: terraform
+    name: terraform-destroy
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,4 +26,3 @@ jobs:
   
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
-  
