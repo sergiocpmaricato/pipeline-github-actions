@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "remote-state"
     storage_account_name = "remotestatecabral"
     container_name       = "remote-state"
-    key                  = "azure-vm/terraform.tfstate"
+    key                  = "pipeline-github-actions/terraform.tfstate"
     use_microsoft_graph = true
   }
 }

@@ -48,7 +48,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = "terraform"
-    public_key = file(var.vm_pub_key)
+    public_key = var.vm_pub_key
   }
 
   os_disk {
